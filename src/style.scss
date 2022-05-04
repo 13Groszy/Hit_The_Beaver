@@ -1,3 +1,4 @@
+$mid-screen: 600px;
 *{
     margin:0;
     padding:0;
@@ -7,7 +8,47 @@ body{
 }
 nav{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     background-color: #fff;
     padding:1rem;
+    @media (min-width: $mid-screen) {
+        flex-direction: row;
+    }
+    .board_wrapper{
+        display: flex;
+        justify-content: space-around;
+        margin-block: 0.5rem;
+        @media (min-width: $mid-screen) {
+            width:50%;
+            justify-content: space-around;
+        }
+
+        select{
+            width:60px;
+        }
+    }
+}
+.game{
+    margin: auto;
+    margin-top: 5vh;
+    display: grid;
+    width: 100%;
+    max-height: 75vh;
+    max-width: 75vh;
+
+    .hole_wrapper{
+        position: relative;
+        display: flex;
+
+        img{
+            width:100%;
+        }
+
+        .hole{
+            position: absolute;
+            z-index: 1;
+            top:0;
+            left: 0;
+        }
+    }
 }

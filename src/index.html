@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Hit_The_Beaver</title>
+</head>
+<body>
+    <nav>
+        <div class="board_wrapper">
+            <select name="board_size" id="board_size">
+                <optgroup label="easy">
+                    <option value="2">2x2</option>
+                    <option value="3">3x3</option>
+                </optgroup>
+                <optgroup label="mid">
+                    <option value="4">4x4</option>
+                    <option value="5">5x5</option>
+                </optgroup>
+                <optgroup label="hard">
+                    <option value="6">6x6</option>
+                    <option value="7">7x7</option>
+                </optgroup>
+                <optgroup label="legendary">
+                    <option value="10">10x10</option>
+                </optgroup>
+            </select>
+            <button class="game_start" onclick="test()">START</button>
+            <button onclick="resetGame()" class="game_restart">RESTART</button>
+        </div>
+        <div class="board_wrapper">
+            <p class="time">Time: 15</p>
+            <p class="score">Score: 0</p>
+            <p class="highscore">Highscore:</p>
+        </div>
+    </nav>
+    <section class="game">
+    </section>
+    <script src="../src/app.js"></script>
+</body>
+</html>
